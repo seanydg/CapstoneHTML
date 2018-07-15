@@ -37,14 +37,14 @@ function register(){
     var errorCode = error.code;
     var errorMessage = error.message;
 
-  firebase.database().ref('businessoperators/' + userId).set({
+  /*firebase.database().ref('businessoperators/' + userId).set({
     email: email_field,
     userPass = password_field,
     userName = contact_name,
     userNo = contact_no,
     businessName = business_name,
     licenseNo = license_No
-  });
+  }); */
     window.alert("Error : " + errorMessage);
 
     // ...
