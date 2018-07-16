@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/navbar.css">
+   <link rel="stylesheet" href="css/profile.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="js/bunsinessop.js"></script>
+	<title>Buiness Platform</title>
+</head>
+<body>
+	<div id='cssmenu'>
+		<ul>
+		   <li><a href='bunsinessop.html'>Home</a></li>
+		   <li><a href='profile.html'>Profile</a></li>
+		   <li class='active'><a href='viewjobs.html'>View Jobs</a></li>
+		   <li><a href='viewUsers.html'>View Users</a></li>
+		   <li><a href='#'>Logout</a></li>
+		</ul>
+	</div>
+
+	<div id="signup_div" class="main-div">
+		<!--Form Input-->
+	    <input type="text" placeholder="Company Name" id="c_Name" />
+	    <input type="text" placeholder="Company Description" id="cDesc" />
+	    <input type="text" placeholder="License Number" id="license_no"/>
+	    <input type="text" placeholder="Contact Details" id="contact_details"/>
+	    <input type="text" placeholder="Company Email" id="cEmail"/>
+
+    	<button onclick="register()">Register with Us</button> 
+	</div>
+
+<!--Javascript-->
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDiL1EOAwiP2N6WaWu-pa7C1vWgIDdK60w",
+    authDomain: "capstone-40833.firebaseapp.com",
+    databaseURL: "https://capstone-40833.firebaseio.com",
+    projectId: "capstone-40833",
+    storageBucket: "capstone-40833.appspot.com",
+    messagingSenderId: "599443914491"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="js/boprofile.js"></script>
+
+</body>
+</html>
