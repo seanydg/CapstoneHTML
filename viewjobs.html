@@ -10,13 +10,41 @@
 </head>
 <body>
 	<div id='cssmenu'>
-	<ul>
-	   <li><a href='#'>Home</a></li>
-	   <li><a href='profile.hmtl'>Profile</a></li>
-	   <li class='active'><a href='viewjobs.html'>View Jobs</a></li>
-	   <li><a href='viewUsers.html'>View Users</a></li>
-	   <li><a href='#'>Logout</a></li>
-	</ul>
-</div>
+		<ul>
+		   <li><a href='businessop.html'>Home</a></li>
+		   <li><a href='profile.html'>Profile</a></li>
+		   <li class='active'><a href='viewjobs.html'>View Jobs</a></li>
+		   <li><a href='viewUsers.html'>View Users</a></li>
+		   <li><a href='#'>Logout</a></li>
+		</ul>
+	</div>
+	<h3>View Jobs</h3>
+
+	<table style="width:100%" id="job-table">
+	  <tr id="tr">
+	  	<th>Job Title</th>
+	    <th>Company Name</th>
+	    <th>Education Requirement</th> 
+	    <th>Category</th>
+	    <th>Description</th>
+	    <th>Poster ID</th>
+	    <th>Salary</th>
+	    <th>User Email</th>
+	</table> 
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+  	// Initialize Firebase
+  		var config = {
+		    apiKey: "AIzaSyDiL1EOAwiP2N6WaWu-pa7C1vWgIDdK60w",
+		    authDomain: "capstone-40833.firebaseapp.com",
+		    databaseURL: "https://capstone-40833.firebaseio.com",
+		    projectId: "capstone-40833",
+		    storageBucket: "capstone-40833.appspot.com",
+		    messagingSenderId: "599443914491"
+  		};
+  		firebase.initializeApp(config);
+</script>
+ <script src="js/viewjobs.js"></script>
 </body>
 </html>
