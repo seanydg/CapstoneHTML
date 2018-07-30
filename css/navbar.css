@@ -33,7 +33,7 @@
   line-height: 1;
 }
 #cssmenu > ul {
-  background: #3db2e1;
+  background: #54A5FA;
 }
 #cssmenu > ul > li {
   float: left;
@@ -59,7 +59,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  background: #3db2e1;
+  background: #54A5FA;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
