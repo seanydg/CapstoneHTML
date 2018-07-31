@@ -10,6 +10,8 @@ $(document).ready(function(){
 		var poster = snap.child("jobPosterID").val();
 		var salary = snap.child("salary").val();
 		var userEmail = snap.child("userEmail").val();
+		
+		//alert(snap.val()); /*Check to see if the site is getting anything*/
 
 		$("#job-table").append("<tr><td>" + title + "</td><td>" + companyName + "</td><td>" + educationRequirement + "</td><td>" + category + "</td><td>" + description + "</td><td>" + poster + "</td><td>" + salary + "</td><td>" + userEmail + "</td>/tr>");
 		//$("#job-table").append("<tr><td>" + title + "</td><td>" + companyName +"</td><td> "+ educationRequirement"</td><td>" + category + "</td><td>" + description +"</td><td>"+ poster +"</td><td>" + salary + "</td><td>" + userEmail + "</td></tr>");
