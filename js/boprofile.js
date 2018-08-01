@@ -1,18 +1,21 @@
-function writeUserData(userEmail, userPass, userName, userNo, businessName, licenseNo) {
-  var userEmail = document.getElementById("email_field").value;
-  var userPass = document.getElementById("password_field").value;
-  var userName = document.getElementById("contact_name").value;
-  var userNo = document.getElementById("contact_no").value;
-  var businessName = document.getElementById("business_name").value;
-  var licenseNo = document.getElementById("license_No").value
+$(document).ready(function(){
 
-  firebase.database().ref('businessoperators/' + userId).set({
-    email: email_field,
-    userPass = password_field,
-    userName = contact_name,
-    userNo = contact_no,
-    businessName = business_name,
-    licenseNo = license_No
+  var companyName = document.getElementById('companyName');
+  var companyDesc = document.getElementById('companyDesc');
+  var licenseNo = document.getElementById('licenseNo');
+  var companyEmail = document.getElementById('companyEmail');
+  var personinCharge = document.getElementById('personinCharge');
+  var contactNo = document.getElementById('contactNo');
+
+  var rootRef = firebase.database().ref("User/User01");
+
+  rootRef.on("child_added", snap => {
+    companyName.innerText = snap.child("companyName").val();
+    companyDesc.innerText = snap.child("companyDesc").val();
+    licenseNo.innerText = snap.child("licenseNo").val();
+    companyEmail.innerText = snap.child("companyEmail").val();
+    personinCharge.innerText = snap.child("personinCharge").val();
+    contactNo.innerText = snap.child("contactNo").val();
   });
-}
 
+});
