@@ -10,12 +10,12 @@ $(document).ready(function(){
   var rootRef = firebase.database().ref().child("User").child("User01");
 
   rootRef.on("child_added", snap => {
-    name.innerText = snap.child("name").val();
-    profileDesc.innerText = snap.child("profileDesc").val();
-    dateofBirth.innerText = snap.child("dateofBirth").val();
-    email.innerText = snap.child("dateofBirth").val();
-    password.innerText = snap.child("password").val();
-    qualification.innerText = snap.child("qualification").val();
+    name.innerHTML = snap.child("name").val();
+    profileDesc.innerHTML = snap.child("profileDesc").val();
+    dateofBirth.innerHTML = snap.child("dateofBirth").val();
+    email.innerHTML = snap.child("dateofBirth").val();
+    password.innerHTML = snap.child("password").val();
+    qualification.innerHTML = snap.child("qualification").val();
   });
 
 });
