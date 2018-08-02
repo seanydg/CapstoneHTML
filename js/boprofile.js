@@ -1,21 +1,21 @@
 $(document).ready(function(){
 
-  var companyName = document.getElementById('companyName');
-  var companyDesc = document.getElementById('companyDesc');
-  var licenseNo = document.getElementById('licenseNo');
-  var companyEmail = document.getElementById('companyEmail');
-  var personinCharge = document.getElementById('personinCharge');
-  var contactNo = document.getElementById('contactNo');
+  var name = document.getElementById('name');
+  var profileDesc = document.getElementById('profileDesc');
+  var dateofBirth = document.getElementById('dateofBirth');
+  var email = document.getElementById('email');
+  var password = document.getElementById('password');
+  var qualification = document.getElementById('qualification');
 
-  var rootRef = firebase.database().ref("User/User01");
+  var rootRef = firebase.database().ref().child("User").child("User01");
 
   rootRef.on("child_added", snap => {
-    companyName.innerText = snap.child("companyName").val();
-    companyDesc.innerText = snap.child("companyDesc").val();
-    licenseNo.innerText = snap.child("licenseNo").val();
-    companyEmail.innerText = snap.child("companyEmail").val();
-    personinCharge.innerText = snap.child("personinCharge").val();
-    contactNo.innerText = snap.child("contactNo").val();
+    name.innerText = snap.child("name").val();
+    profileDesc.innerText = snap.child("profileDesc").val();
+    dateofBirth.innerText = snap.child("dateofBirth").val();
+    email.innerText = snap.child("dateofBirth").val();
+    password.innerText = snap.child("password").val();
+    qualification.innerText = snap.child("qualification").val();
   });
 
 });
