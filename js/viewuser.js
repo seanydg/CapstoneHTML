@@ -3,12 +3,12 @@ $(document).ready(function(){
 var rootRef = firebase.database().ref().child("User");
 
 rootRef.on("child_added", snap => {
-		var name = snap.child("name").val(); 
-		var profileDesc = snap.child("profileDesc").val();
+		var name = snap.child("userName").val(); 
+		var profileDesc = snap.child("profileDescription").val();
 		var dateofBirth = snap.child("dateofBirth").val();
-		var email = snap.child("email").val();
+		var email = snap.child("emailAddress").val();
 		var password = snap.child("password").val();
-		var qualification = snap.child("qualification").val(); 
+		var qualification = snap.child("userQualification").val(); 
 
 	//alert(snap.val()); /*Check to see if the site is getting anything*/
 
